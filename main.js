@@ -3,6 +3,13 @@ const myValue = document.querySelector(".theValue");
 let button1 = document.querySelector(".mode1");
 let button2 = document.querySelector(".mode2");
 let boolValue = true;
+let saveValue = localStorage.getItem("theKey");
+textArea.value = saveValue
+
+textArea.addEventListener("input", () => {
+    localStorage.setItem("theKey", textArea.value)
+})
+
 addEventListener("load", () => {
     whatMode()
 })
